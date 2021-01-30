@@ -123,12 +123,17 @@ input:checked + label + .content {
   max-width: 1;
   margin: auto;
   padding-top: 10rem;
+  padding-bottom: 20rem;
   text-align: center;
   font-family: $default-font-family;
   font-style: $font-style-normal;
   font-size: 3rem;
   line-height: 5.9rem;
   display: flex;
+
+  @include respond(tab-port) {
+    padding-bottom: 0rem;
+  }
 
   &__text {
     font-family: $default-font-family;
