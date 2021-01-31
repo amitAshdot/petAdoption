@@ -1,0 +1,64 @@
+.newPet {
+  background-color: $color-about-background;
+
+  &__container {
+    width: 100%;
+    background-image: url(/static/media/women-and-dog.9df739a4.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y: 11rem;
+    padding-top: 14rem;
+    padding-right: 131px;
+    padding-bottom: 15vw;
+
+    @include respond(tab-land) {
+      padding-right: 5rem;
+      background-size: contain;
+      padding-bottom: 10vw;
+    }
+    @include respond(tab-port) {
+      padding-right: 2.5vw;
+      padding-left: 2.5vw;
+      background-size: contain;
+      padding-bottom: 5vw;
+    }
+
+    @include respond(phone) {
+      background-image: url(../../images/women-and-dog-mobile.svg);
+      background-position: bottom;
+      background-size: contain;
+      padding-bottom: 50rem;
+    }
+  }
+
+  &-title {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 4.375rem;
+    line-height: 83px;
+    margin-bottom: 40px;
+    color: #5ac5d9;
+  }
+  &-subtitle {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.5rem;
+    line-height: 47px;
+    text-align: right;
+  }
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+
+    &-link {
+      width: fit-content;
+      margin: 3rem 0;
+
+      & > .miniSearch__button {
+        margin: 0rem 0;
+      }
+    }
+  }
+}
