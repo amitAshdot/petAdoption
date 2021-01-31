@@ -11,6 +11,11 @@ const Navigation = () => {
                 <li>
                     <Link to={ROUTES.SEARCH} className="header__nav__list-link">כל החיות</Link>
                 </li>
+
+                <li>
+                    <Link to={ROUTES.ABOUT} className="header__nav__list-link">העלאת מודעה</Link>
+                </li>
+
                 <li>
                     <Link to={ROUTES.ABOUT} className="header__nav__list-link">אודות</Link>
                 </li>

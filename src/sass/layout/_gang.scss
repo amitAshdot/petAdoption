@@ -6,4 +6,11 @@
     margin-left: auto;
     margin-right: auto;
     object-fit: contain;
+
+    @include respond(phone) {
+        padding-top: 100px;
+        object-fit: cover;
+        width: 475px;
+        margin-right: -25px;
+    }
 }

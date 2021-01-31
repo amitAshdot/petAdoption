@@ -25,7 +25,7 @@
       text-align: center;
     }
 
-    @include respond(tab-port) {
+    @include respond(tab-land) {
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -49,7 +49,7 @@
   }
 
   &__title {
-    font-family: Rubik;
+    font-family: $default-font-family;
     font-style: $font-style-normal;
     font-weight: $font-weight-bold;
     font-size: 4.375rem;
@@ -66,7 +66,7 @@
       margin-right: auto;
       margin-left: auto;
       text-align: center;
-      font-size: 35px;
+      font-size: 28px;
     }
   }
 
@@ -86,15 +86,19 @@
     font-family: Rubik;
     font-style: $font-style-normal;
     font-weight: $font-weight-bold;
+
     @include respond(big-desktop) {
       width: 25%;
     }
 
     @include respond(tab-land) {
-      margin-top: 25px;
-      margin-bottom: 25px;
-      padding-right: 25px;
       width: 80%;
+      height: 60px;
+      margin-top: 15px;
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: 15px;
+      padding-right: 25px;
       font-size: 18px;
       font-weight: $font-weight-light;
     }
@@ -118,18 +122,17 @@
 
     @include respond(big-desktop) {
       width: 79%;
-
     }
 
     @include respond(tab-land) {
       width: 80%;
-      margin-top: 25px;
-      margin-bottom: 25px;
+      height: 100px;
+      margin-top: 15px;
+      margin-right: 10%;
+      margin-left: 10%;
+      margin-bottom: 15px;
       font-size: 18px;
       font-weight: $font-weight-light;
-    }
-
-    @include respond(tab-port) {
     }
   }
 
@@ -156,10 +159,6 @@
 
     @include respond(tab-land) {
       display: none;
-      font-size: 14px;
-      font-weight: $font-weight-light;
-      padding-right: 1px;
-      width: 7%;
     }
   }
   
@@ -174,7 +173,7 @@
 
     @include respond(tab-port) {
       margin-bottom: -65px;
-      width: 100%;
+      width: 90%;
     }
   }
 
@@ -215,6 +214,9 @@
     margin-bottom: 40px;
 
     @include respond(tab-land) {
+      height: 40px;
+      width: 200px;
+      font-size: 24px;
       margin-right: auto;
       margin-left: auto;
     }

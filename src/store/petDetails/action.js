@@ -74,7 +74,9 @@ export const getAdditionalDetails = (pet, id) => {
                         shelterId: pet.shelter_id
                     }
                 }).then(response => {
-                    dispatch(shelterSuccess(response.data))
+                    if (response.status === 200) {
+                        dispatch(shelterSuccess(response.data))
+                    }
                 })
                 .catch(error => {
                     const err = error.message
