@@ -69,11 +69,15 @@
       color: $color-black;
 
       @include respond(tab-port) {
-        font-size: 18px;
+        font-size: 16px;
         margin-bottom: 400px;
         margin-right: auto;
         margin-left: auto;
         text-align: center;
+      }
+
+      @media screen and (max-width: 400px) {
+        font-size: 14px;
       }
     }
   }

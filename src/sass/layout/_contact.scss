@@ -25,7 +25,7 @@
       text-align: center;
     }
 
-    @include respond(tab-port) {
+    @include respond(tab-land) {
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -86,6 +86,7 @@
     font-family: Rubik;
     font-style: $font-style-normal;
     font-weight: $font-weight-bold;
+
     @include respond(big-desktop) {
       width: 25%;
     }

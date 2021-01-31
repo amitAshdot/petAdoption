@@ -25,6 +25,10 @@ const HeaderToggle = () => {
                     <li onClick={closeWindow}>
                         <Link to={ROUTES.SEARCH} className="navigation__link">כל החיות</Link>
                     </li>
+
+                    <li onClick={closeWindow}>
+                        <Link to={ROUTES.ABOUT} className="navigation__link">העלאת מודעה</Link>
+                    </li>
                     <li onClick={closeWindow}>
                         <Link to={ROUTES.ABOUT} className="navigation__link">אודות</Link>
                     </li>
