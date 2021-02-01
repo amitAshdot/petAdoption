@@ -13,7 +13,7 @@ const Navigation = () => {
                 </li>
 
                 <li>
-                    <Link to={ROUTES.ABOUT} className="header__nav__list-link">העלאת מודעה</Link>
+                    <Link to={ROUTES.NEWPET} className="header__nav__list-link">העלאת מודעה</Link>
                 </li>
 
                 <li>
