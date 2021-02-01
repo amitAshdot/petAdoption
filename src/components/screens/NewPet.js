@@ -29,7 +29,7 @@ const NewPet = () => {
                         onClick={(event) => handleClick(event, 'new-pet')}
                         className="newPet__buttons-link"
                     >
-                        <button className="newPet__button" type="button">העלת בעל חיים</button>
+                        <button className="newPet__button" type="button">העלאת בעל חיים</button>
                     </Link>
 
                     <Link
@@ -37,7 +37,7 @@ const NewPet = () => {
                         onClick={(event) => handleClick(event, 'new-association')}
                         className="newPet__buttons-link"
                     >
-                        <button className="newPet__button" type="button">העלת פרטי עמותה</button>
+                        <button className="newPet__button" type="button">העלאת פרטי עמותה</button>
                     </Link>
                 </div>
             </div>
