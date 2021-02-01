@@ -3,50 +3,60 @@
 
   &__container {
     width: 100%;
-    background-image: url(/static/media/women-and-dog.9df739a4.svg);
-    background-size: 100%;
+    background-image: url(../../images/new-pet-background.svg);
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position-y: 11rem;
+    background-position-x: 25rem;
+    background-position-y: 7rem;
     padding-top: 14rem;
     padding-right: 131px;
     padding-bottom: 15vw;
 
-    @include respond(tab-land) {
-      padding-right: 5rem;
-      background-size: contain;
-      padding-bottom: 10vw;
-    }
-    @include respond(tab-port) {
-      padding-right: 2.5vw;
-      padding-left: 2.5vw;
-      background-size: contain;
-      padding-bottom: 5vw;
+
+    @media screen and (max-width: 1800px) {
+      background-position-x: left;
     }
 
-    @include respond(phone) {
-      background-image: url(../../images/women-and-dog-mobile.svg);
-      background-position: bottom;
-      background-size: contain;
-      padding-bottom: 50rem;
+    @media screen and (max-width: 1200px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-right: 0px;
+      background-image: none;
+    }
+
+    @include respond(tab-port) {
+      margin-right: auto;
+      margin-left: auto;
     }
   }
 
   &-title {
-    font-family: Rubik;
-    font-style: normal;
-    font-weight: 600;
+    font-family: $default-font-family;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-bold;
     font-size: 4.375rem;
     line-height: 83px;
     margin-bottom: 40px;
     color: #5ac5d9;
+
+    @include respond(tab-port) {
+      line-height: 45px;
+      text-align: center;
+      }
   }
   &-subtitle {
-    font-family: Rubik;
-    font-style: normal;
-    font-weight: 400;
+    font-family: $default-font-family;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-light;
     font-size: 2.5rem;
     line-height: 47px;
     text-align: right;
+
+    @include respond(tab-port) {
+      max-width: 80%;
+    text-align: center;
+    }
   }
   &__buttons {
     display: flex;
@@ -59,6 +69,47 @@
       & > .miniSearch__button {
         margin: 0rem 0;
       }
+    }
+
+    @include respond(tab-port) {
+      width: 100%;
+      margin-right: 25%;
+      margin-left: 25%;
+      align-items: center;
+      justify-content: center;
+      }
+  }
+
+
+  &__button {
+    position: relative;
+    margin-left: 75px;
+    text-align: center;
+    vertical-align: middle;
+    width: 30vw;
+    height: 53.36px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background: $color-secondary;
+    border: 1px solid $color-primary;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.28);
+    border-radius: 20px;
+    color: $color-white;
+    font-family: $default-font-family;
+    font-style: $font-style-normal;
+    font-weight: $font-weight-bold;
+    font-size: 2.3rem;
+    line-height: 36px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+
+    @include respond(tab-port) {
+      width: 250px;
+      height: auto;
+      margin-left: 0px;
+      padding: 0.5rem;
     }
   }
 }

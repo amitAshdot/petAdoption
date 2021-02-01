@@ -12,7 +12,7 @@ const NewPet = () => {
     const handleClick = (event, linkTo) => {
         event.preventDefault();
         if (linkTo === "new-pet")
-            window.open(ROUTES.GOOGLEASSOCIATION);
+            window.open(ROUTES.GOOGLEPETS);
         else if (linkTo === "new-association")
             window.open(ROUTES.GOOGLEASSOCIATION);
     }
@@ -20,22 +20,24 @@ const NewPet = () => {
     return (
         <div className="newPet">
             <div className="newPet__container">
-                <h1 className="newPet-title">רוצים לקחת חלק?</h1>
-                <h3 className="newPet-subtitle">הרשמו בתור עמותה או העלו חיית מחמד עם טופס פשוט</h3>
+                <h1 className="newPet-title">רוצים לשתף מודעה באתר?</h1>
+                <h3 className="newPet-subtitle">ניתן לעשות זאת בקלות באמצעות מילוי טופס קצר</h3>
                 <div className="newPet__buttons">
-                    <Link
-                        target="_blank"
-                        onClick={(event) => handleClick(event, 'new-association')}
-                        className="newPet__buttons-link"
-                    >
-                        <button class="miniSearch__button" type="button">הרשמו כעמותה</button>
-                    </Link>
+
                     <Link
                         target="_blank"
                         onClick={(event) => handleClick(event, 'new-pet')}
                         className="newPet__buttons-link"
                     >
-                        <button class="miniSearch__button" type="button">הוספת חבר מחמד</button>
+                        <button className="newPet__button" type="button">העלת בעל חיים</button>
+                    </Link>
+
+                    <Link
+                        target="_blank"
+                        onClick={(event) => handleClick(event, 'new-association')}
+                        className="newPet__buttons-link"
+                    >
+                        <button className="newPet__button" type="button">העלת פרטי עמותה</button>
                     </Link>
                 </div>
             </div>
