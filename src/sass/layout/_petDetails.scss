@@ -231,10 +231,6 @@
     background-position-y: top;
     background-position-x: left;
     cursor: pointer;
-    transition: 0.3s;
-    &:hover {
-      opacity: 0.7;
-    }
 
     @media only screen and(max-width: 125em) {
       width: 350px;
@@ -258,6 +254,10 @@
     height: 488px;
     margin-right: 50px;
     border-radius: 100px;
+    transition: 0.3s;
+    &:hover {
+      opacity: 0.7;
+    }
 
     @media only screen and(max-width: 125em) {
       width: 385px;
@@ -291,6 +291,7 @@
     &:hover {
       opacity: 0.7;
     }
+
     @media only screen and(max-width: 125em) {
       margin-left: 0px;
       width: 500px;
