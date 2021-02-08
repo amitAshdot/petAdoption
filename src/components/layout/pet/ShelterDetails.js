@@ -20,19 +20,25 @@ const ShelterDetails = () => {
 
                         <div className="ShelterDetails__contactWrapper">
                             <p className="ShelterDetails__contactTitle">טלפון</p>
-                            <p className="ShelterDetails__contactInfo">{detailState.shelter.phoneNumber}</p>
+                            <a className="ShelterDetails__contactInfo" href={`tel:${detailState.shelter.phoneNumber}`}>{detailState.shelter.phoneNumber}</a>
                         </div>
 
 
                         <div className="ShelterDetails__contactWrapper">
                             <p className="ShelterDetails__contactTitle">אימייל</p>
-                            <p className="ShelterDetails__contactInfo">{detailState.shelter.email}</p>
+                            <a className="ShelterDetails__contactInfo" href={`mailto:${detailState.shelter.email}`}>{detailState.shelter.email}</a>
                         </div>
 
                         {detailState.shelter.website !== "" ?
                             <div className="ShelterDetails__contactWrapper">
                                 <p className="ShelterDetails__contactTitle">אתר העמותה</p>
-                                <p className="ShelterDetails__contactInfo">{detailState.shelter.website}</p>
+                                <a className="ShelterDetails__contactInfo"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href={detailState.shelter.website}
+                                >
+                                    {detailState.shelter.website}
+                                </a>
                             </div>
                             :
                             <div />
@@ -41,7 +47,13 @@ const ShelterDetails = () => {
                         {detailState.shelter.socialSite !== "" ?
                             <div className="ShelterDetails__contactWrapper">
                                 <p className="ShelterDetails__contactTitle">רשת חברתית</p>
-                                <p className="ShelterDetails__contactInfo">{detailState.shelter.socialSite}</p>
+                                <a className="ShelterDetails__contactInfo"
+                                    href={detailState.shelter.socialSite}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    {detailState.shelter.socialSite}
+                                </a>
                             </div>
 
                             :
