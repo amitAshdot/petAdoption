@@ -20,7 +20,7 @@ const ShelterDetails = () => {
 
                         <div className="ShelterDetails__contactWrapper">
                             <p className="ShelterDetails__contactTitle">טלפון</p>
-                            <p className="ShelterDetails__contactInfo">{detailState.shelter.phoneNumber}</p>
+                            <a className="ShelterDetails__contactInfo" href={`tel:${detailState.shelter.phoneNumber}`}>{detailState.shelter.phoneNumber}</a>
                         </div>
 
 
