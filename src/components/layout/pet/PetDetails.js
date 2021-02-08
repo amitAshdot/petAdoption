@@ -205,7 +205,7 @@ const PetDetails = () => {
 
                             <p className="petDetails__detail">
                                 <img className="petDetails__icon" src={require('../../../images/phone-profile.svg')}  alt="אייקון של טלפון" />
-                            טלפון: {detailState.pet.phoneNumber}
+                         {detailState.pet.phoneNumber}
                             </p>
 
                             {detailState.pet.description !== "" ?

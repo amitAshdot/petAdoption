@@ -163,6 +163,7 @@
     font-size: 20px;
     text-decoration: none;
     color: $color-black-main;
+    word-break: break-all;
     @include respond(tab-port) {
       font-size: 22px;
     }
