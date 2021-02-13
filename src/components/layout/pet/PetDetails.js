@@ -150,12 +150,12 @@ const PetDetails = () => {
 
 
     return (
-        <div style={{ background: '#e7e3d7', paddingBottom: '150px' }}>
+        <div style={{ background: '#FBF8EF', paddingBottom: '150px' }}>
             {detailState.pet !== null ?
                 <div>
                     <div id="imageViewerId" className="imageViewer" ref={renderForMobile}>
                         <span className="close">&times;</span>
-                        {detailState.images.length > 0 ?
+                         {detailState.images.length > 0 ?
                             <h2 id="gallaryCount" className="numberOfImages">{'1/' + (detailState.images.length + 1)}</h2>
                             :
                             <div />
@@ -191,6 +191,7 @@ const PetDetails = () => {
 
                             <p className="petDetails__detail">
                                 <img className="petDetails__icon" src={require('../../../images/size.svg')} alt="אייקון של גובה" />
+                                גודל&nbsp;
                                 {detailState.pet.size}
                             </p>
                             <p className="petDetails__detail">
@@ -205,7 +206,7 @@ const PetDetails = () => {
 
                             <p className="petDetails__detail">
                                 <img className="petDetails__icon" src={require('../../../images/phone-profile.svg')}  alt="אייקון של טלפון" />
-                            טלפון: {detailState.pet.phoneNumber}
+                         {detailState.pet.phoneNumber}
                             </p>
 
                             {detailState.pet.description !== "" ?

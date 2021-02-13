@@ -221,6 +221,7 @@
   }
 
   &__topWrapper {
+    margin-top: 50px;
     display: flex;
     flex-direction: column-reverse;
     width: 450px;
@@ -231,10 +232,6 @@
     background-position-y: top;
     background-position-x: left;
     cursor: pointer;
-    transition: 0.3s;
-    &:hover {
-      opacity: 0.7;
-    }
 
     @media only screen and(max-width: 125em) {
       width: 350px;
@@ -253,11 +250,17 @@
   }
 
   &__topImage {
+    margin-bottom: 50px;
+    margin-right: 30px;
     object-fit: cover;
     width: 485px;
     height: 488px;
-    margin-right: 50px;
+    margin-right: 30px;
     border-radius: 100px;
+    transition: 0.3s;
+    &:hover {
+      opacity: 0.7;
+    }
 
     @media only screen and(max-width: 125em) {
       width: 385px;
@@ -291,6 +294,7 @@
     &:hover {
       opacity: 0.7;
     }
+
     @media only screen and(max-width: 125em) {
       margin-left: 0px;
       width: 500px;
