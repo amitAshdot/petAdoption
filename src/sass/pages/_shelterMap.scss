@@ -1,4 +1,9 @@
 .ShelterMap {
+    padding-right: 15px;
+
+    @include respond(tab-port) {
+        padding: 15px;
+      }
 
     &__markerName {
         text-align: center;
