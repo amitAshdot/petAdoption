@@ -41,6 +41,7 @@ const ShelterMap = () => {
 
     const { isLoaded } = useJsApiLoader({
         id: 'google-map-script',
+        language: 'he',
         googleMapsApiKey: "AIzaSyDiAu70gQ4IMdIA5Jt8Y1t0257ReutV2mQ"
     })
     const [map, setMap] = React.useState(null)
@@ -74,8 +75,8 @@ const ShelterMap = () => {
         website: "https://www.letlive.org.il/",
         nav: "עמותת תנו לחיות לחיות",
         position: {
-            lat: 32.0069574,
-            lng: 34.7630300
+            lat: 32.08141107662856,
+            lng: 34.80155481663905
         }
     },
     {
