@@ -124,11 +124,10 @@ const ShelterMap = () => {
 
                                 </a>
 
-                                <a href={"http://maps.google.com/?q=עמותת תנו לחיות לחיות" + shelter.nav} target="_blank"
+                                <a href={"http://maps.google.com/?q=" + shelter.nav} target="_blank"
                                     className="ShelterMap__website"
                                     rel="noopener noreferrer">
                                     <p>
-
                                         <img src={require('../../images/compass.svg')} className="ShelterMap__websiteLogo" alt="לוגו ניווט" />
                                 &nbsp;&nbsp;ניווט
                             </p>
