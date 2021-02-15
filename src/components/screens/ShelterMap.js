@@ -91,10 +91,6 @@ const ShelterMap = () => {
             showingInfoWindow: false
         });
 
-    const containerStyle = {
-        width: '100%',
-        height: '2000px'
-    };
 
     const position = {
         lat: 32.0569574,
@@ -103,12 +99,16 @@ const ShelterMap = () => {
 
     const OPTIONS = {
         minZoom: 8,
-        maxZoom: 18
+        maxZoom: 18,
+        streetViewControl: false
     }
 
     const { isLoaded } = useJsApiLoader({
         id: 'google-map-script',
         language: 'he',
+        // zoomControlOptions: {
+        //     position: 
+        //    },
         googleMapsApiKey: "AIzaSyDiAu70gQ4IMdIA5Jt8Y1t0257ReutV2mQ"
     })
     const [map, setMap] = React.useState(null)
@@ -142,7 +142,6 @@ const ShelterMap = () => {
                     onClick={onMarkerClick.bind(this, shelter.id)}
                     onMouseOver={onMarkerClick.bind(this, shelter.id)}
                     position={shelter.position}
-                    name={'Kenyatta International Convention Centre'}
                     icon={{
                         url: require('../../images/map.svg'),
                         scaledSize: map !== null ? new window.google.maps.Size(50, 50) : null
@@ -185,6 +184,11 @@ const ShelterMap = () => {
             <></>
         )
 
+
+          const containerStyle = {
+            width: '100%',
+            height: '80vh'
+        };
 
     return (
         <div className="ShelterMap">
