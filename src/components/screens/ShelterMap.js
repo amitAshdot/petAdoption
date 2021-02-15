@@ -1,9 +1,54 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import { GoogleMap, useJsApiLoader, InfoWindow, Marker } from '@react-google-maps/api';
 
 const ShelterMap = () => {
 
-    // const markerSize = new window.google.maps.Size(50, 50)
+    const shelterData = [{
+        id: 1,
+        name: "עמותת תנו לחיות לחיות",
+        address: "דב פרידמן 8, רמת גן",
+        website: "https://www.letlive.org.il/",
+        nav: "עמותת תנו לחיות לחיות",
+        position: {
+            lat: 32.08141107662856,
+            lng: 34.80155481663905
+        }
+    },
+    {
+        id: 2,
+        name: "אגודת צער בעלי חיים בישראל רמת גן והסביבה",
+        address: "חפץ חיים 4, תל אביב יפו",
+        website: "https://www.spca.org.il/",
+        nav: "אגודת צער בעלי חיים בישראל רמת גן והסביבה",
+        position: {
+            lat: 32.07364912700168,
+            lng: 34.798742224227205
+        }
+    },
+    {
+        id: 3,
+        name: "רחובות אוהבת חיות",
+        address: "אברבנאל 49, תל אביב יפו",
+        website: "https://www.rehovotlovesanimals.org/",
+        nav: "רחובות אוהבת חיות",
+        position: {
+            lat: 32.055493999331865,
+            lng: 34.76708007034027
+        }
+    },
+    {
+        id: 4,
+        name: "עמותת חבר לי",
+        address: "2RQG+QC רמת גן",
+        website: "https://www.imutz.org/",
+        nav: "32.0395003404623, 34.82603726324894",
+        position: {
+            lat: 32.0396678436307,
+            lng: 34.82601668312799
+        }
+    }
+    ]
+
     const [state, setState] = useState(
         {
             markerId: null,
@@ -30,8 +75,8 @@ const ShelterMap = () => {
     };
 
     const position = {
-        lat: 32.0069574,
-        lng: 34.7630300
+        lat: 32.0569574,
+        lng: 34.7930300
     }
 
     const OPTIONS = {
@@ -52,7 +97,7 @@ const ShelterMap = () => {
         setMap(bounds)
         var zoomChangeBoundsListener = window.google.maps.event.addListenerOnce(map, 'bounds_changed', function (event) {
             if (this.getZoom()) {
-                this.setZoom(11);
+                this.setZoom(13);
             }
         });
         setTimeout(function () { window.google.maps.event.removeListener(zoomChangeBoundsListener) }, 2000);
@@ -67,30 +112,6 @@ const ShelterMap = () => {
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
-
-    const shelterData = [{
-        id: 1,
-        name: "עמותת תנו לחיות לחיות",
-        address: "דב פרידמן 8, רמת גן",
-        website: "https://www.letlive.org.il/",
-        nav: "עמותת תנו לחיות לחיות",
-        position: {
-            lat: 32.08141107662856,
-            lng: 34.80155481663905
-        }
-    },
-    {
-        id: 2,
-        name: "אגודת צער בעלי חיים בישראל רמת גן והסביבה",
-        address: "חפץ חיים 4, תל אביב יפו",
-        website: "https://www.spca.org.il/",
-        nav: "אגודת צער בעלי חיים בישראל רמת גן והסביבה",
-        position: {
-            lat: 32.07364912700168,
-            lng: 34.798742224227205
-        }
-    }
-    ]
 
     const shelterMarkers = shelterData.length > 0 ? (
         shelterData.map(shelter => {
@@ -152,7 +173,6 @@ const ShelterMap = () => {
                     onLoad={onLoad}
                     onUnmount={onUnmount}
                 >
-
                     <></>
                     {shelterMarkers}
                 </GoogleMap>
