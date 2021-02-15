@@ -6,21 +6,21 @@
       }
 
     &__markerName {
-        text-align: center;
+        // text-align: center;
         font-family: $default-font-family;
         font-style: $font-style-normal;
         font-weight: $font-weight-normal;
     }
 
     &__markerAddress {
-        text-align: center;
+        // text-align: center;
         padding-top: 5px;
         font-family: $default-font-family;
         font-style: $font-style-normal;
     }
 
     &__website {
-        text-align: center;
+        // text-align: center;
         display: flex;
         text-decoration: none;
         margin-top: 15px;
