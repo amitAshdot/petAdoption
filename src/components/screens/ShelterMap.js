@@ -3,6 +3,15 @@ import { GoogleMap, useJsApiLoader, InfoWindow, Marker } from '@react-google-map
 
 const ShelterMap = () => {
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
+    const containerStyle = {
+        width: '100%',
+        height: '80vh'
+    };
+
     const shelterData = [{
         id: 1,
         name: "עמותת תנו לחיות לחיות",
@@ -65,8 +74,19 @@ const ShelterMap = () => {
         website: "https://animals-roof.org.il/",
         nav: "32.04713501167837, 34.758790158960615",
         position: {
-            lat:  32.04713501167837,
+            lat: 32.04713501167837,
             lng: 34.75879082951286
+        }
+    },
+    {
+        id: 7,
+        name: "הום דוג",
+        address: 'ש"י עגנון 1, תל אביב יפו',
+        website: "http://www.homedog.co.il/",
+        nav: "הום דוג",
+        position: {
+            lat: 32.10261454639824,
+            lng: 34.78258525535481
         }
     }
     ]
@@ -106,9 +126,6 @@ const ShelterMap = () => {
     const { isLoaded } = useJsApiLoader({
         id: 'google-map-script',
         language: 'he',
-        // zoomControlOptions: {
-        //     position: 
-        //    },
         googleMapsApiKey: "AIzaSyDiAu70gQ4IMdIA5Jt8Y1t0257ReutV2mQ"
     })
     const [map, setMap] = React.useState(null)
@@ -124,15 +141,10 @@ const ShelterMap = () => {
         });
         setTimeout(function () { window.google.maps.event.removeListener(zoomChangeBoundsListener) }, 2000);
         setMap(map)
-    }, [])
+    }, [position])
 
-    const onUnmount = React.useCallback(function callback(map) {
+    const onUnmount = React.useCallback(function callback() {
         setMap(null)
-    }, [])
-
-
-    useEffect(() => {
-        window.scrollTo(0, 0)
     }, [])
 
     const shelterMarkers = shelterData.length > 0 ? (
@@ -154,10 +166,9 @@ const ShelterMap = () => {
                             <div className="ShelterMap">
                                 <p className="ShelterMap__markerName">{shelter.name}</p>
                                 <p className="ShelterMap__markerAddress">{shelter.address}</p>
-                                <a className="ShelterMap__markerAddress"
+                                <a className="ShelterMap__website"
                                     href={shelter.website}
                                     target="_blank"
-                                    className="ShelterMap__website"
                                     rel="noopener noreferrer"   >
                                     <p>
                                         <img src={require('../../images/desktop.svg')} className="ShelterMap__websiteLogo" alt="לוגו מחשב" />
@@ -184,12 +195,6 @@ const ShelterMap = () => {
             <></>
         )
 
-
-          const containerStyle = {
-            width: '100%',
-            height: '80vh'
-        };
-
     return (
         <div className="ShelterMap">
             {isLoaded ? (
@@ -208,4 +213,4 @@ const ShelterMap = () => {
     )
 }
 
-export default React.memo(ShelterMap);
+export default ShelterMap
