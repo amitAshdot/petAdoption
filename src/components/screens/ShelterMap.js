@@ -27,6 +27,7 @@ const ShelterMap = () => {
     const { isLoaded } = useJsApiLoader({
         id: 'google-map-script',
         language: 'he',
+        mapTypeControl: false,
         googleMapsApiKey: "AIzaSyDiAu70gQ4IMdIA5Jt8Y1t0257ReutV2mQ"
     })
 
