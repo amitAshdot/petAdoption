@@ -82,11 +82,22 @@ const ShelterMap = () => {
         id: 7,
         name: "הום דוג",
         address: 'ש"י עגנון 1, תל אביב יפו',
-        website: "http://www.homedog.co.il/",
+        website: "https://www.homedog.co.il/",
         nav: "הום דוג",
         position: {
             lat: 32.10261454639824,
             lng: 34.78258525535481
+        }
+    },
+    {
+        id: 8,
+        name: "אס. או. אס",
+        address: "במרכז המסחרי, רחוב רבינדרנת טאגור 38, תל אביב יפו",
+        website: "https://www.sospets.co.il/",
+        nav: "עמותת S.O.S חיות ברמת אביב",
+        position: {
+            lat: 32.1171106323388,
+            lng: 34.7975022065613
         }
     }
     ]
