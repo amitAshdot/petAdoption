@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { googleMapsAPIKey } from '../../config/apiKeys'
 import { shelterLocations } from '../constants/shelterLocations';
 import { GoogleMap, useJsApiLoader, InfoWindow, Marker } from '@react-google-maps/api';
 
@@ -28,7 +29,7 @@ const ShelterMap = () => {
         id: 'google-map-script',
         language: 'he',
         mapTypeControl: false,
-        googleMapsApiKey: "AIzaSyDiAu70gQ4IMdIA5Jt8Y1t0257ReutV2mQ"
+        googleMapsApiKey: googleMapsAPIKey
     })
 
     const [state, setState] = useState(
