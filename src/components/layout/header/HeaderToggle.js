@@ -31,7 +31,7 @@ const HeaderToggle = () => {
                     </li>
 
                     <li onClick={closeWindow}>
-                        <Link to={ROUTES.SHELTERMAP} className="navigation__link">עמותות בישראל</Link>
+                        <Link to={ROUTES.SHELTERMAP} className="navigation__link">עמותות בארץ</Link>
                     </li>
                     <li onClick={closeWindow}>
                         <Link to={ROUTES.ABOUT} className="navigation__link">אודות</Link>
