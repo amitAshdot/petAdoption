@@ -17,6 +17,10 @@ const Navigation = () => {
                 </li>
 
                 <li>
+                    <Link to={ROUTES.SHELTERMAP} className="header__nav__list-link">עמותות בארץ</Link>
+                </li>
+
+                <li>
                     <Link to={ROUTES.ABOUT} className="header__nav__list-link">אודות</Link>
                 </li>
                 <li>
