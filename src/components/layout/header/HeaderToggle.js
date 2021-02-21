@@ -29,6 +29,10 @@ const HeaderToggle = () => {
                     <li onClick={closeWindow}>
                         <Link to={ROUTES.NEWPET} className="navigation__link">העלאת מודעה</Link>
                     </li>
+
+                    <li onClick={closeWindow}>
+                        <Link to={ROUTES.SHELTERMAP} className="navigation__link">עמותות בארץ</Link>
+                    </li>
                     <li onClick={closeWindow}>
                         <Link to={ROUTES.ABOUT} className="navigation__link">אודות</Link>
                     </li>

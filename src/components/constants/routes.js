@@ -5,6 +5,7 @@ export const SearchResults = '/results';
 export const SEARCH = '/search';
 export const CONTACT = '/contact';
 export const DETAILS = '/details';
+export const SHELTERMAP = '/map';
 
 //google form
 export const GOOGLEPETS = "https://docs.google.com/forms/d/e/1FAIpQLSfFY4LkgEmM0JAdY3G8CyGbaUURt7yJ7TdQWi-H_KzjHPPMmA/viewform"
