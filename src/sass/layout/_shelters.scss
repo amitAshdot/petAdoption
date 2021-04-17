@@ -43,7 +43,7 @@
     font-weight: $font-weight-bold;
     font-size: 5rem;
     line-height: 53px;
-    color: #56bed1;
+    color: $color-primary;
 
     @include respond(tab-port) {
       font-size: 30px;

@@ -53,7 +53,7 @@
     font-weight: $font-weight-bold;
     font-size: 45px;
     line-height: 53px;
-    color: #56bed1;
+    color: $color-primary;
 
     @media only screen and(max-width: 125em) {
       font-size: 35px;

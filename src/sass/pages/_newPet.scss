@@ -38,7 +38,7 @@
     font-size: 4.375rem;
     line-height: 83px;
     margin-bottom: 40px;
-    color: #5ac5d9;
+    color: $color-primary;
 
     @include respond(tab-port) {
       line-height: 45px;
